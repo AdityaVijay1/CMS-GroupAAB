@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Title</title>
 
-    <!-- Add your styles or link to your CSS file here -->
+    
     <link rel="stylesheet" href="style.css">
 
     <?php wp_head(); ?> <!-- If using WordPress, include this line for plugins/scripts -->
@@ -14,7 +14,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="wp-content/themes/newtheme/images/jculogo.png" height="500px", width="1000px">
+                <img src="wp-content/themes/newtheme/images/jculogo.png" height="500px", width="1000px" style="position:relative; left:500px;">
             </div>
 
             <nav>

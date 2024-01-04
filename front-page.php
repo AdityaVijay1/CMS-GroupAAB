@@ -1,61 +1,16 @@
 
 
 <?php
-$isUserLoggedIn = false;
-
-if ($isUserLoggedIn) {
-    echo '<p>Welcome back! You are logged in.</p>';
-} else {
-    echo '<p>Welcome! Please log in to access more content.</p>';
-}
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    echo '<h1>Welcome to The Home Page of the j-Education Theme</h1>';
 
-    
-    $containsNumber = false;
-    for ($i = 0; $i < strlen($username); $i++) {
-        if (is_numeric($username[$i])) {
-            $containsNumber = true;
-            break;
-        }
-    }
-
-    
-    if ($username === "admin" && $password === "password" && !$containsNumber) {
-        
-        header("Location: dashboard.php");
-        exit();
-    } else {
-        $errorMessage = "Invalid username or password";
-        if ($containsNumber) {
-            $errorMessage = "Not correct username. The username should not contain numbers.";
-        }
-    }
-}
 
 
 include 'header.php';
 ?>
 <body style = "background-color: #ADD8E6;"></body>
-    <h1>Login</h1>
+    
 
-    <?php if (isset($errorMessage)) { ?>
-        <p><?php echo $errorMessage; ?></p>
-    <?php } ?>
-
-    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
-
-        <input type="submit" value="Login">
-    </form>
-
-    <h2>Welcome to The Home Page of my Theme</h2>
 
     <?php
     echo '<p>This is a paragraph echoed using PHP.</p>';
@@ -65,10 +20,13 @@ include 'header.php';
         <div class="row">
             <div class="column">
                 <?php
-                echo "<p>Left Side Content</p>";
+                echo "<p>Initial Test Message Content</p>";
                 ?>
+                <?php
+                echo "<p>We are thrilled to have you at the Singapore campus of James Cook University on 20 May 2023, from 11am to 5pm to explore all that our university has to offer. As you tour our facilities and speak with our academics, staff, and students, we hope that you will gain a better understanding of what it means to be a student at James Cook University, Singapore. Whether you are interested in pursuing a degree in one of our many academic programs, looking to get involved in student clubs, or simply curious about life on campus, we are here to answer any questions you may have and help you make a more informed decision. So, please join us and take the time to explore our campus, meet our community members, and discover what sets our university apart. We are excited to have you here and look forward to showing you around soon!</p>";
+                ?>           
             </div>
-
+            <br><br>
             <div class="column">
                 <?php
                
@@ -89,78 +47,30 @@ include 'header.php';
                 $showLeftContent = true;
 
                 if ($showLeftContent) {
-                    echo '<p>Left Side Content is showcased</p>';
+                    echo '<p>If condition is true (Showcase)</p>';
                 } else {
-                    echo '<p>Left side content is hidden.</p>';
+                    echo '<p>If condition is false (Showcase)</p>';
                 }
                 ?>
             </div>
 
-            <div class="column">
-                <?php
-                
-                $isPremiumUser = true;
-                $hasAccessToPremiumContent = true;
-
-                if ($isPremiumUser) {
-                    if ($hasAccessToPremiumContent) {
-                        echo '<p>Premium User: You have access to premium content.</p>';
-                    } else {
-                        echo '<p>Sorry, premium content is not available to you.</p>';
-                    }
-                } else {
-                    echo '<p>Regular User: Please upgrade to premium for exclusive content.</p>';
-                }
-                ?>
-            </div>
+            
         </div>
     </div>
 
     <?php
     
-    $colors = array("Red", "Green", "Blue");
+    $achievements = array("Ranked Top 2 in the World", "#1 in Australia and #14 in the World", "Awarded 5 Stars");
 
-    echo '<p>Available colors:</p>';
+    echo '<h2>Achievements:</h2>';
     echo '<ul>';
-    foreach ($colors as $color) {
-        echo "<li>$color</li>";
+    foreach ($achievements as $achievement) {
+        echo "<li>$achievement</li>";
     }
     echo '</ul>';
     ?>
     
-    <div class="container">
-        <div class="row">
-            <div class="column">
-                <?php
-                $person = array("name" => "Ben", "age" => 25, "city" => "Singapore");
+<h3><a href="#">Register Now</a></h3>    
 
-                echo '<p>User details:</p>';
-                echo '<ul>';
-                foreach ($person as $key => $value) {
-                    echo "<li><strong>$key:</strong> $value</li>";
-                }
-                echo '</ul>';
-                ?>
-            </div>
-
-            <div class="column">
-                <?php
-                $numbers = array(1, 2, 3, 4, 5);
-
-                echo '<p>Numbers:</p>';
-                echo '<ul>';
-                foreach ($numbers as $number) {
-                    echo "<li>$number</li>";
-                }
-                echo '</ul>';
-                ?>
-            </div>
-        </div>
-    </div>
-<?php
-$userName = "Ben";
-echo '<p>' . greet_user($userName) . '</p>';
-?>
-<body style = "background-color: black;">
 <?php include 'footer.php'; ?>
 
