@@ -1,4 +1,4 @@
-# CP3402 Github Project Repository
+# CP3402 Group PA 1 Github Project Repository
 This is the repository stores the contents for the first version of our website which includes the PHP, CSS, HTML and JS files
 
 
