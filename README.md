@@ -1,6 +1,15 @@
 # CP3402 Group PA 1 Github Project Repository
 This is the repository stores the contents for the first version of our website which includes the PHP, CSS, HTML and JS files
 
+# Version 1
+Details:
+
+This is the first version design of our website where we have used basic PHP Coding, CSS and HTML coding to practice and develop the coding layout of the website. 
+Minimal content is present on the website.
+
+This version essentially helps us to understand, learn and practice more about creating themes from scratch.
+
+The code is simple and easy to understand at this current stage.
 
 # Screenshots of Version 1 Website:
 
